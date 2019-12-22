@@ -53,9 +53,9 @@ echo '*********************************'
 
 # Install and Setup Openssh Server
 sudo apt-get purge openssh-server
-sudo apt-get install -y openssh-server
-sudo apt-get install -y openvpn
-sudo apt-get install -y network-manager-openvpn-gnome
+sudo apt-get install -yy openssh-server
+sudo apt-get install -yy openvpn
+sudo apt-get install -yy network-manager-openvpn-gnome
 sudo systemctl enable sshd
 sudo systemctl status sshd --no-pager
 
