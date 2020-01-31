@@ -90,6 +90,9 @@ echo '************************************'
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install -yy python3.4
+sudo apt install -yy python3.6
+sudo apt install -yy python3.7
+sudo apt install -yy python3.8
 echo '*************************************'
 echo "Installation of Python 3.4 - COMPLETE"
 echo '*************************************'
@@ -101,6 +104,13 @@ sudo apt-get update
 sudo apt-get install -yy ukuu
 echo '*******************************'
 echo "Installation of UKUU - COMPLETE"
+echo '*******************************'
+
+
+# Change Swapiness
+sudo sysctl vm.swappiness=10
+echo '*******************************'
+echo "Swappiness Changed To Level 10 - COMPLETE"
 echo '*******************************'
 
 
