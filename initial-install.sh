@@ -158,3 +158,12 @@ echo '***************************************'
 echo '*************************************************************************'
 echo "Installation and Configuration of Initial Packages Should Now Be Complete"
 echo '*************************************************************************'
+
+# Set up pgadmin4
+sudo echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" >> /etc/apt/sources.list.d/pgdg.list
+sudo wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+sudo apt update
+sudo apt install pgadmin4 pgadmin4-apache2
+echo '***************************************'
+echo "PgAdmin4 has been installed - COMPLETE"
+echo '***************************************'
