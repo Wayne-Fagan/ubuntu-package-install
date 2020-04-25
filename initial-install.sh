@@ -138,6 +138,14 @@ echo '*************************************************'
 echo "System76 PPA Added and Pop Theme Added - COMPLETE"
 echo '*************************************************'
 
+# Install Timeshift - Back up system, not home directory
+sudo add-apt-repository -y ppa:teejee2008/timeshift
+sudo apt-get update
+sudo apt-get install -yy timeshift
+echo '*************************************************'
+echo "Timeshift PPA Added and Timeshift Added - COMPLETE"
+echo '*************************************************'
+
 # Create Directories For Local Mount Points - Desktop Only
 sudo mkdir /mnt/HD1-INT
 sudo mkdir /mnt/HD2-INT
