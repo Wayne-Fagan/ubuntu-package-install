@@ -27,5 +27,12 @@ echo '***********************************************'
 echo "Docker Installation - COMPLETE - Needs Restart!"
 echo '***********************************************'
 
+# Install Go
+sudo snap install go --classic
+
+echo '**************************************'
+echo "GO Installation - COMPLETE"
+echo '**************************************'
+
 # Download Latest Terraform
 echo "Download Terraform - Latest version may not be compatible with Giant Terraform"

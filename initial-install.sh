@@ -14,7 +14,7 @@ echo '*******************************'
 sudo apt-get install -yy filezilla transmission geary youtube-dl terminator vlc  pidgin clementine gparted hexchat mpv \
 filezilla tree htop fslint corebird postgresql postgresql-contrib calibre nfs-common deja-dup net-tools nmap git python-pip \
 python3-venv zsh keepass2 clamav firejail mysql-server default-libmysqlclient-dev mysql-workbench gdm3 gnome-session \
-gnome-tweak-tool chrome-gnome-shell nemo vim
+gnome-tweak-tool chrome-gnome-shell nemo vim qbittorrent
 
 echo '***********************************************'
 echo "Packages Installed From Repositories - COMPLETE"
@@ -45,6 +45,7 @@ sudo snap install chromium
 sudo snap install tusk
 sudo snap install spotify
 sudo snap install sublime-text --classic
+sudo snap install datagrip --classic
 
 echo '*********************************'
 echo "Snap Package Installs - COMPLETE"
@@ -166,3 +167,12 @@ echo '***************************************'
 echo '*************************************************************************'
 echo "Installation and Configuration of Initial Packages Should Now Be Complete"
 echo '*************************************************************************'
+
+# Set up pgadmin4
+sudo wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" |sudo tee  /etc/apt/sources.list.d/pgdg.list
+sudo apt update
+sudo apt install -yy pgadmin4 pgadmin4-apache2
+echo '***************************************'
+echo "PgAdmin4 has been installed - COMPLETE"
+echo '***************************************'
